@@ -1,0 +1,320 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'fira_sanslight';
+    src: url('../fonts/firasans-light-webfont.eot');
+    src: url('../fonts/firasans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/firasans-light-webfont.woff2') format('woff2'), url('../fonts/firasans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira_sansmedium';
+    src: url('../fonts/firasans-medium-webfont.eot');
+    src: url('../fonts/firasans-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/firasans-medium-webfont.woff2') format('woff2'), url('../fonts/firasans-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* BASE */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: fira_sanslight, 'Arial', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #ffffff;
+    line-height: 1.4;
+    color: #4f4f4f;
+    min-width: 650px;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/*------------ webkit scroll style----------*/
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff
+}
+
+ ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 30px;
+    width: 6px;
+    height: 83px;
+    background-color: #c4c4c4;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.7;
+}
+
+ ::-webkit-scrollbar {
+    width: 7px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* FIXES */
+
+* {
+    outline: none;
+}
+
+
+/* DIALOG */
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: none;
+}
+
+.container {
+    width: 620px;
+    height: auto;
+    z-index: 2;
+}
+
+
+/* LOGO */
+
+.logo__wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.logo__image {
+    margin-bottom: 1.25em;
+}
+
+
+/* FILTER */
+
+.filter__wrapper {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.filter__title {
+    font-size: 1em;
+    font-family: fira_sansmedium, 'Arial', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #ff8663;
+    margin: 0 0 0 0;
+    padding: 0.6875em 45px 0.6875em 1em;
+}
+/* search */
+.filter__search {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0;
+    padding: 0.6255em 0.9375em 0.6255em 0.9375em;
+    margin: 0 0 0 0;
+}
+.filter__search-input {
+    width: 281px;
+    height: auto;
+    color: #a5a5a5;
+    font-size: 0.75em;
+    background-color: #ffffff;
+    border: 0;
+    margin: 0 0 0 1.75em;
+    padding: 0.5em 1em 0.5em 27px;
+    background-image: url(../img/ic-search_gray.png);
+    background-repeat: no-repeat;
+    background-position: 7px 5px;
+    border-radius: 10px;
+}
+.filter__search-input:first-child {
+    margin-left: 0;
+}
+/* content */
+.friends__row {
+    display: block;
+}
+.friends__column {
+    float: left;
+    width: 50%;
+    overflow-y: auto;
+    margin: 0 0 0 0;
+    padding: 0.625em 0.9375em 0.625em 0.9375em;
+    height: auto;
+    border-left: 1px solid #f0f0f0;
+}
+.friends__column:first-child {
+    border-left: 0;
+}
+/* title */
+.friends__content-title {
+    font-size: 0.75em;
+    font-family: fira_sansmedium, 'Arial', sans-serif;
+    font-weight: 500;
+    color: #4f4f4f;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+/* friends list */
+.friends__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 330px;
+}
+
+.friend__item {
+    width: 100%;
+    height: auto;
+    margin: -1px 0 0 0;
+    padding: 1.5em 43px 1.5em 60px;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.friend__item:hover {
+    background-color: #f0f0f0;
+}
+
+#leftList .friend__item {
+    cursor: move;
+}
+
+
+/* photo */
+
+.friend__images {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 6px;
+    top: 9px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.friend__photo {
+    width: 100%;
+    height: auto;
+}
+
+
+/* add to list */
+
+.friend__add {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    right: 7px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+    background-color: transparent;
+    background-image: url(../img/ic-plus_gray.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+
+/* remove from list */
+
+.friend__remove {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    right: 7px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+    background-color: transparent;
+    background-image: url(../img/ic-x_gray.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+
+/* name */
+
+.friend__name {
+    font-size: 0.75em;
+    font-family: fira_sansmedium, 'Arial', sans-serif;
+    font-weight: 500;
+    color: #4f4f4f;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* close */
+
+.filter__close {
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    text-indent: -9999px;
+    background-color: transparent;
+    background-image: url(../img/ic-close_white.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+
+/* buttons */
+
+.filter__buttons {
+    text-align: right;
+    background-color: #f0f0f0;
+    padding: 0.5em;
+}
+
+.filter__button {
+    font-size: 0.75em;
+    font-family: fira_sanslight, 'Arial', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #ffefea;
+    background-color: #ff8663;
+    border: 0;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
